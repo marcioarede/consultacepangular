@@ -1,0 +1,54 @@
+
+<form [formGroup]="consultaCepForm">
+    <div class="main-div">
+        <mat-card class="example-card">
+            <mat-card-title>Crosswork - Busca por CEP</mat-card-title>
+            <mat-card-actions class="main">
+            
+                <mat-form-field appearance="fill">
+                    <mat-label>Digite o CEP</mat-label>
+                    <input matInput  id="cep" name="cep" formControlName="cep"  mask="00000-000" required>
+                  </mat-form-field>
+                <div *ngIf="retornoValido ==='valido'">
+                  <mat-form-field appearance="fill">
+                    <mat-label>Logradouro</mat-label>
+                    <input matInput id="logradouro" name="logradouro" formControlName="logradouro" readonly>
+                  </mat-form-field>
+
+                  <mat-form-field appearance="fill">
+                    <mat-label>Complemento</mat-label>
+                    <input matInput id="complemento" name="complemento" formControlName="complemento" readonly>
+                  </mat-form-field>
+
+                  <mat-form-field appearance="fill">
+                    <mat-label>UF</mat-label>
+                    <input matInput id="uf" name="uf" formControlName="uf" readonly>
+                  </mat-form-field>
+                
+                  <mat-form-field appearance="fill">
+                    <mat-label>Bairro</mat-label>
+                    <input matInput id="bairro" name="bairro" formControlName="bairro" readonly>
+                  </mat-form-field>
+
+                  <mat-form-field appearance="fill">
+                    <mat-label>Localidade</mat-label>
+                    <input matInput id="localidade" name="localidade" formControlName="localidade" readonly>
+                  </mat-form-field>
+
+                  <mat-form-field appearance="fill">
+                    <mat-label>DDD</mat-label>
+                    <input matInput id="ddd" name="ddd" formControlName="ddd" readonly>
+                  </mat-form-field>
+
+                  
+                </div>
+                  <br>
+            <button mat-raised-button color="accent" (click)="consultarCep()">Pesquisar</button>
+            <button mat-raised-button color="primary" type="button" (click)="resetaDadosForm()">Limpar Formulario</button>
+            </mat-card-actions>
+            
+        </mat-card>
+        
+    </div>
+
+</form>
