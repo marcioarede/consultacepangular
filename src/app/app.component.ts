@@ -58,7 +58,7 @@ export class AppComponent implements OnInit{
   popularForm(dados, form){
 
     if(dados.erro == true){
-      this.snackBar.open('CEP não encontrado', 'fechar',{
+      this.snackBar.open('CEP não encontrado', 'Fechar',{
         horizontalPosition: 'right',
         verticalPosition: 'top',
       });
